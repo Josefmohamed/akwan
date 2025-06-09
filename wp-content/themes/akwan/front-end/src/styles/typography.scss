@@ -1,0 +1,291 @@
+@import 'variables.scss';
+
+// region fonts
+
+///
+@font-face {
+  font-weight: 900;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-Black.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-Bold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-ExtraBold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-Medium.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-Regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Somar Sans";
+  src: url('fonts/SomarSans-SemiBold.woff2') format('woff2');
+  font-style: normal;
+}
+
+
+// endregion fonts
+//region typography
+.display, .display p {
+  font-family: $Somar;
+  color: $black;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  @include media-screen-min-1024 {
+    font-size: 64px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 94px;
+  }
+  @include media-screen-min-1920 {
+    font-size: 110px;
+  }
+}
+
+h1, .akwan-h1, .akwan-h1 p {
+  font-family:$Somar;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 50px;
+  }
+  @include media-screen-min-1024 {
+    font-size: 78px;
+  }
+}
+
+h2, .akwan-h2, .akwan-h2 p {
+  font-family:$Somar;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 25px;
+  }
+  @include media-screen-min-1024 {
+    font-size: 36px;
+  }
+}
+
+h3, .akwan-h3, .akwan-h3 p {
+  font-family:$Somar;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 22px;
+  }
+  @include media-screen-min-1024 {
+    font-size: 32px;
+  }
+}
+
+h4, .akwan-h4, .akwan-h4 p {
+  font-family:$Somar;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 28px;
+  }
+}
+
+h5, .akwan-h5, .akwan-h5 p {
+  font-family:$Somar;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 120%;
+  font-style: normal;
+  @include media-screen-min-768 {
+    font-size: 22px;
+  }
+}
+
+h6, .akwan-h6, .akwan-h6 p {
+  font-family:$Somar;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 20px;
+  }
+}
+
+
+.paragraph-18, .paragraph-18 p {
+  font-family:$Somar;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  @include media-screen-min-768 {
+    font-size: 18px;
+  }
+}
+
+.paragraph-17, .paragraph-17 p {
+  font-family:$Somar;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  @include media-screen-min-992 {
+    font-size: 17px;
+  }
+}
+
+.paragraph-16, .paragraph-16 p {
+  font-family:$Somar;
+  font-size: 16px;
+  font-weight: 50;
+  line-height: 120%;
+}
+
+.paragraph-14, .paragraph-14 p {
+  font-family:$Somar;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.paragraph-12, .paragraph-12 p {
+  font-family:$Somar;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+
+.button-large {
+  color: $black;
+  font-family: $Somar;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.button-base {
+  color: $black;
+  font-family: $Somar;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100px;
+}
+
+.button-small {
+  color: $black;
+  font-family: $Somar;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%;
+}
+
+.cta-button {
+  @include theme-cta-button-style;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.midnight-depth , .midnight-depth p {
+  color: $midnight-depth;
+}
+
+.urbanist , .urbanist p {
+  font-family: $Somar;
+}
+
+.maxima , .maxima p {
+  font-family: $Somar;
+}
+
+.fw-300, .fw-300 p {
+  font-weight: 300;
+}
+
+.fw-400, .fw-400 p {
+  font-weight: 400;
+}
+
+.fw-500, .fw-500 p {
+  font-weight: 500;
+}
+
+.fw-600, .fw-600 p {
+  font-weight: 600;
+}
+
+.fw-700, .fw-700 p {
+  font-weight: 700;
+}
+
+.fw-800, .fw-800 p {
+  font-weight: 800;
+}
+
+.twilight-steel , .twilight-steel p {
+  color: $twilight-steel;
+}
+
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.white-color, .white-color p {
+  color: $white;
+}
+
+.black-color, .black-color p {
+  color: $black;
+}
+
+.color-transition {
+  transition: color $duration;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line {
+  width: 92px;
+  height: 3px;
+  background-color: $midnight-depth;
+  margin: 0 auto;
+}
+

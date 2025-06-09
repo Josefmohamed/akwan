@@ -1,0 +1,10 @@
+{
+  "hero_block": {
+    "title": "Hero Block",
+    "status": true
+  },
+  "get_in_touch_block": {
+    "title": "Get In Touch Block",
+    "status": true
+  }
+}

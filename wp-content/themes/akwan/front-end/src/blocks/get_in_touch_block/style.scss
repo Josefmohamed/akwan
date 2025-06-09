@@ -1,0 +1,176 @@
+@import '../../styles/variables.scss';
+
+.get_in_touch_block {
+    padding-block: 200px 100px;
+  @include media-screen-min-1024 {
+    padding-block: 259px 256px;
+  }
+  .get-in-touch-svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    top: 50%;
+    @include media-screen-min-1024 {
+      top: 62.82%;
+      display: flex;
+    }
+    @include media-screen-min-1280 {
+      top: 71.20%;
+    }
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-screen-min-1280 {
+      align-items: flex-start;
+    }
+    @include media-screen-min-1024 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include media-screen-min-1440 {
+      padding-left: 17px;
+    }
+    .left-content {
+      position: relative;
+      width: 100%;
+      @include media-screen-min-1024 {
+        width: 47.2%;
+      }
+      @include media-screen-min-1280 {
+        width: 46.2%;
+        padding-top: 96px;
+      }
+      @include media-screen-min-1440  {
+        width:37.22%;
+      }
+      @include media-screen-max-1024 {
+        gap: 50px;
+        display: flex;
+        flex-direction:column;
+        margin-bottom: 50px;
+      }
+      .top-content {
+        max-width: 290px;
+        @include media-screen-min-992 {
+          max-width: 424px;
+        }
+        .title {
+          color: $skybolt-blue;
+          margin-bottom: 24px;
+          @include media-screen-min-1024 {
+            margin-bottom: 48px;
+          }
+        }
+        .description {
+          p {
+            color: $twilight-steel;
+          }
+        }
+      }
+      .contact-social-links {
+        @include media-screen-min-1024 {
+          margin-top: 250px;
+        }
+        @include media-screen-min-1280 {
+          margin-top: 360px;
+        }
+        @include media-screen-min-1440 {
+          margin-top: 459px;
+        }
+        .tel-and-mail {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          @include media-screen-min-600 {
+            align-items: center;
+            flex-direction: row;
+          }
+          @include media-screen-min-1024 {
+            justify-content: space-between;
+          }
+          .twilight-steel {
+            transition: color $duration;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .same-svg {
+              transition: fill $duration;
+            }
+            &:hover {
+              color: $skybolt-blue;
+              .same-svg {
+                path {
+                  fill: $skybolt-blue;
+                }
+              }
+            }
+          }
+        }
+        .social-links-follow {
+          gap: 13px;
+          margin-top: 50px;
+          @include media-screen-min-1024 {
+            margin-top: 80px;
+          }
+          @include media-screen-min-1440 {
+            margin-top: 112px;
+          }
+          .follow-us {
+            color: $skybolt-blue;
+          }
+        }
+        .social-links-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          flex-wrap: wrap;
+          .social-link {
+            width: 31px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon-wrapper {
+              width: 20px;
+              height: 20px;
+              img {
+                object-fit: contain;
+              }
+            }
+          }
+        }
+      }
+    }
+    .contact-us-form-wrapper {
+      background-color: $frosted-sky;
+      border-radius: 25px;
+      width: 100%;
+      padding: 30px;
+      @include media-screen-min-992 {
+        padding: 45px 40px;
+      }
+      @include media-screen-min-1440 {
+        padding: 94px 80px;
+      }
+      @include media-screen-min-1024 {
+        width: 49.07%;
+      }
+      @include media-screen-min-1440 {
+        width: 48.07%;
+      }
+      .form-info {
+        padding-bottom: 50px;
+        gap: 21px;
+        @include media-screen-min-1024 {
+          padding-bottom: 80px;
+        }
+        .form-title {
+          color: $twilight-steel;
+        }
+      }
+    }
+  }
+}

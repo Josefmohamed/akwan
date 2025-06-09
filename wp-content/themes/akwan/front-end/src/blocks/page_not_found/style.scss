@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+.page-not-found {
+  padding-block: 180px 100px;
+  @include media-screen-min-1280 {
+    padding-top: 250px;
+  }
+  .content-wrapper {
+    gap: 50px;
+    .main-cta-button {
+      margin-inline: auto;
+    }
+  }
+}

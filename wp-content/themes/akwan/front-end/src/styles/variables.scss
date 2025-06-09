@@ -1,0 +1,236 @@
+@use "sass:math";
+
+$duration: .6s;
+$ease: ease-out;
+
+
+$white: #FFF;
+$black: #000;
+$sky-breeze: #023568;
+$midnight-depth: #D9C099;
+$skybolt-blue: #EFEBE2;
+$twilight-steel: #F5F4ED;
+$graphite-gray: #D9D9D9;
+$frosted-sky: #2A2929;
+$pale-sky: #E6F6FE;
+$midnight-overlay: #182A3B99;
+$coFFF_yellow: #FFF500;
+$co555_gray: #555555;
+$coF5F_light: #F5F5F5;
+$coFC3_red: #FC3A3A;
+$coFFD_yellow: #FFD623;
+$co20C_green: #20C641;
+$coCCF_sky: #CCF2FF;
+$co056_blue: #0563DE;
+$co1F1_dark: #1F1F1F;
+$coE4D_lavender: #E4DCFF;
+$co378_blue: #3782E5;
+$co4DD_green: #4DD167;
+$coFFD_yellow2: #FFDE4F;
+$coFFA_orange: #FFA941;
+$coFD6_red2: #FD6161;
+$coFFD_yellow3: #FFD623;
+$coFFE_cream: #FFEAD0;
+$coFF9_orange2: #FF9412;
+$coFED_pink: #FED8D8;
+$coFC3_red3: #FC3A3A;
+$coD2F_mint: #D2F4D9;
+$co20C_green2: #20C641;
+$coCCF_sky2: #CCF2FF;
+$co00B_blue: #00BFFF;
+$co00B_blue2: #00BFFF;
+$co7A4_purple: #7A4FFF;
+$coD13_violet: #D135ED;
+$coF6D_pink2: #F6D7FB;
+$co01C_cyan: #01C6D9;
+$coCCF_cyan2: #CCF4F7;
+$coFF4_pink3: #FF4CB4;
+
+
+$Somar: 'Somar Sans';
+
+$container-padding-mobile: 16px;
+$container-padding-tablet: 24px;
+
+// media screen sizes
+$small-screen-max-width: 599.98px;
+$medium-screen-max-width: 1023.98px;
+$medium-screen-min-600: 600px;
+$medium-screen-min-768: 768px;
+$medium-screen-min-width: 1024px;
+$medium-screen-min-992: 992px;
+$large-screen-min-width: 1280px;
+$large-screen-max-width: 1279.8px;
+$x-large-screen-min-width: 1440px;
+$x-large-plus-screen-min-width: 1500px;
+$xx-large-screen-min-width: 1920px;
+$xxx-large-screen-min-width: 2500px;
+
+//region media query
+
+//region {only} media
+
+
+@mixin media-screen-max-600() {
+  @media screen and (max-width: $small-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin media-screen-max-768() {
+  @media screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin media-screen-max-992() {
+  @media screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-992() {
+  @media screen and (min-width: $medium-screen-min-992) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-768() {
+  @media screen and (min-width: $medium-screen-min-768) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-600() {
+  @media screen and (min-width: $medium-screen-min-600) {
+    @content;
+  }
+}
+
+@mixin media-screen-from600-to1024() {
+  @media screen and (min-width: $medium-screen-min-600) and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1024() {
+  @media screen and (min-width: $medium-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-max-1024() {
+  @media screen and (max-width: $medium-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1280() {
+  @media screen and (min-width: $large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-max-1280() {
+  @media screen and (max-width: $large-screen-max-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1440() {
+  @media screen and (min-width: $x-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1500() {
+  @media screen and (min-width: $x-large-plus-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1920() {
+  @media screen and (min-width: $xx-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-from-2500() {
+  @media screen and (min-width: $xxx-large-screen-min-width) {
+    @content;
+  }
+}
+
+//endregion {only} media
+
+//region {max} media
+
+//endregion {max} media
+
+//region {min} media
+
+//endregion {min} media
+
+//endregion media query
+
+@mixin theme-cta-button-style {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  font-style: normal;
+  transition: background-color $duration, color $duration;
+  font-family: $Somar;
+  color: $sky-breeze;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  background-color: $twilight-steel;
+  padding: 19px 30px;
+  border-radius: 20px;
+  &:hover{
+    background-color: $co378_blue;
+    color: $white;
+  }
+  &.light {
+    color: $midnight-depth;
+    background-color: $sky-breeze;
+    svg {
+      margin-left: 15px;
+      transition: fill $duration;
+    }
+    &:hover{
+      background-color: $co378_blue;
+      color: $white;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+@mixin input-style {
+  font-family: $Somar;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+
+@mixin max-lines($number: var(--max-lines)) {
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

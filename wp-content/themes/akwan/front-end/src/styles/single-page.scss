@@ -1,0 +1,138 @@
+@import 'typography.scss';
+@import 'variables.scss';
+
+.single_hero_block {
+  margin-bottom: 100px;
+
+  .container {
+    padding: 0;
+  }
+
+  .blog-card {
+    z-index: 0;
+    border-radius: 0 0 50px 50px;
+    padding: 200px 24px;
+    @include media-screen-min-768 {
+      padding: 200px 50px;
+    }
+    @include media-screen-min-992 {
+      padding: 200px 100px;
+    }
+    @include media-screen-min-1280 {
+      padding: 311px 100px 229px;
+    }
+
+    .card-title {
+      z-index: 3;
+      display: unset;
+      -webkit-line-clamp: unset;
+      -webkit-box-orient: unset;
+      overflow: unset;
+      text-overflow: unset;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:after {
+      z-index: 2;
+    }
+
+    .cover-image {
+      z-index: 1;
+    }
+
+    .card-svg {
+      position: absolute;
+      z-index: 3;
+      width: 58px;
+      height: 55px;
+      right: 24px;
+      bottom: 55px;
+      @include media-screen-min-768 {
+        width: 58px;
+        height: 55px;
+        right: 85px;
+        bottom: 85px;
+      }
+      @include media-screen-min-1024 {
+        width: 78px;
+        height: 75px;
+        right: 122px;
+        bottom: 108px;
+      }
+    }
+  }
+}
+
+.single-content {
+  padding-bottom: 100px;
+  @include media-screen-min-1024 {
+    padding-bottom: 200px;
+  }
+    .container {
+
+    @include media-screen-min-1440{
+      padding: 0;
+      max-width: 1354px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    font-weight: 800;
+    font-family: $Somar;
+    color: $black;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 150%;
+    @include media-screen-min-768 {
+      font-size: 30px;
+    }
+    @include media-screen-min-1440 {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    margin-bottom: 35px;
+    font-family: $Somar;
+    color: $black;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    font-size: 20px;
+    @include media-screen-min-768{
+      font-size: 25px;
+      //margin-bottom: 35px;
+    }
+    @include media-screen-min-1024 {
+      font-size: 28px;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 30px;
+    margin-bottom: 35px;
+    @include media-screen-min-1024 {
+      padding-left: 40px;
+    }
+    li{
+      font-family: $Somar;
+      color: $black;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      font-size: 20px;
+      @include media-screen-min-768 {
+        font-size: 25px;
+      }
+      @include media-screen-min-1024 {
+        font-size: 28px;
+      }
+    }
+  }
+}
