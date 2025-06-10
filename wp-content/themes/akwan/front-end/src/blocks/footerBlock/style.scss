@@ -41,6 +41,11 @@ footer {
       }
       .links-wrapper {
         gap: 25px;
+        .link {
+          &:hover {
+            color: #023568;
+          }
+        }
       }
     }
   }

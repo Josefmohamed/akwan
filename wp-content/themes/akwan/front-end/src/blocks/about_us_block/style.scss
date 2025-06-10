@@ -1,22 +1,37 @@
 @import '../../styles/variables.scss';
 
 .about_us_block {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 4;
+  .hero-image {
+    width: 100%;
+    .cover-image {
+      padding-top: 56.25%;
+    }
+  }
   .internal-content {
     position: absolute;
-    //top: 14.32%;
-    top: 116px;
+    top: 14.32%;
     background-color: $skybolt-blue;
-    padding: 30px;
+    padding: 30px 20px;
     width: 70%;
     @include media-screen-min-768 {
       width: 48.47%;
     }
     @include media-screen-min-1024 {
       padding: 78px 71px 69px 121px;
+    }
+    &.large-media {
+      display: none;
+      @include media-screen-min-1280 {
+        display: flex;
+      }
+    }
+    &.small-media {
+      display: flex;
+      position: relative;
+      width: 100%;
+      @include media-screen-min-1280 {
+        display: none;
+      }
     }
   }
 }

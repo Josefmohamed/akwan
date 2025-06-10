@@ -14,6 +14,10 @@
   "our_mission_block": {
     "title": "Our Mission Block",
     "status": true
+  },
+  "our_vision_block": {
+    "title": "Our Vision Block",
+    "status": true
   }
 
 }
