@@ -1,70 +1,30 @@
 @import '../../styles/variables.scss';
 
 header {
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 9999;
   transition: background-color $duration;
   transform: translateX(0);
-  top: 30px;
-  @include media-screen-min-1024 {
-    top: 52px;
-  }
-  // header
-  .container {
-    margin: 0 auto;
-    padding-inline: 24px;
-    @include media-screen-min-768 {
-      padding-inline: 32px;
-    }
-    @include media-screen-min-1280 {
-      padding-inline: 44px;
-    }
-  }
+  background-color: $frosted-sky;
+  padding-block: 51px;
 
   .cards-wrapper {
     display: flex;
     align-items: center;
-    position: relative;
-    background-color: #8BCCFE26;
-    width: 100%;
-    border-radius: 16px;
-    padding: 20px;
+    gap: 50px;
     @include media-screen-max-1024 {
       justify-content: space-between;
     }
     @include media-screen-min-1024 {
-      gap: 40px;
-      padding: 35px 25px;
-      justify-content: space-between;
-    }
-    @include media-screen-min-1280 {
-      gap: 80px;
-      padding: 35px;
-      justify-content: unset ;
-    }
-    @include media-screen-min-1440 {
-      gap: 150px;
-      padding: 35px 111px;
+      gap: 95px;
     }
   }
   // logo
   .header-logo {
-    width: 125px;
-    height: 46px;
     z-index: 90;
-    @include media-screen-min-1024 {
-      width: 153px;
-      height: 36px;
-    }
-    @include media-screen-min-1280 {
-      width: 183px;
-      height: 46px;
-    }
-    @include media-screen-min-1280 {
-      width: 183px;
-      height: 46px;
-    }
+    width: 103px;
+    height: 54px;
     img, svg {
       width: 100%;
       height: 100%;
@@ -109,7 +69,7 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background: $midnight-depth;
+        background: $twilight-steel;
         opacity: .99;
         transition: background-color $duration;
         display: table;
@@ -186,10 +146,6 @@ header {
     position: relative;
     align-items: center;
     flex-direction: row;
-    @include media-screen-max-1024 {
-      margin-top: -30px;
-    }
-    //margin-left: auto;
 
     @include media-screen-max-1024 {
       position: fixed;
@@ -203,17 +159,17 @@ header {
 
     &.header-links-active {
       transform: translateX(0);
-
       &:before {
         opacity: 0.6;
       }
     }
+
   }
 
   .navbar-wrapper {
     padding-block: 150px 100px;
     padding-inline: 44px;
-    background: $white;
+    background: $frosted-sky;
     width: 100%;
     height: 100vh;
     //height: 100 dvh;
@@ -232,8 +188,8 @@ header {
       flex-direction: row;
       align-items: center;
     }
-    @include media-screen-min-1440{
-      gap: 32px;
+    @include media-screen-min-1024{
+      gap: 80px;
     }
   }
 
@@ -242,14 +198,14 @@ header {
     flex-direction: column;
     gap: 40px;
     @include media-screen-min-992 {
-      gap: 30px;
+      gap: 50px;
     }
     @include media-screen-min-1024 {
       align-items: center;
       flex-direction: row;
     }
     @include media-screen-min-1280 {
-      gap: 40px;
+      gap: 80px;
     }
   }
 
@@ -257,132 +213,28 @@ header {
     position: relative;
     cursor: pointer;
     width: fit-content;
-    color: $midnight-depth;
-    transition: color 0.3s linear;
+    transition: color $duration;
     list-style: none;
     &:after {
       position: absolute;
       content: "";
+      bottom: -10px;
+      left: 0;
       width: 0;
-      height: 5px;
-      left: 50%;
-      transform: translate(-50%);
-      border-radius: 15px;
-      bottom: -15px;
-      background-color: currentColor;
-      transition: width 0.3s linear;
+      height: 4px;
+      background-color: $graphite-gray;
+      transition: width $duration;
     }
-
-    &:before {
-      //content: 'Home'; /* duplicate the text */
-      content: 'Home'; // This pulls from the data-text attribute
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%) scale(0.9);
-      font-family: $Somar;
-      color: currentColor;
-      z-index: 2;
-      opacity: 0;
-      font-size: 32px;
-      font-weight: 800;
-      line-height: 155%;
-      transition: opacity 0.3s , transform 0.3s linear;
-    }
-
-    .header-link {
-      color: currentColor;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-      font-weight: 100;
-      transition: opacity 0.3s linear , transform 0.3s linear , color 0.3s linear;
-      line-height: 155%;
-      transform: scale(1);
-      @include media-screen-min-1024 {
-        display: block;
-      }
-    }
-
     &:hover {
-      color:$skybolt-blue;
-      &:after {
-        width: 28px;
-      }
-      &:before {
-        opacity: 1;
-        transform: translate(-50%,-50%) scale(1);
-      }
-      .header-link {
-        opacity: 0;
-        transform: scale(1.1);
-      }
-    }
-
-    }
-
-  &.dark-header {
-
-    .burger-menu {
-      span {
-        &:after, &:before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
+        &:after {
           width: 100%;
-          height: 100%;
-          background: $frosted-sky;
-          opacity: .99;
-          transition: background-color $duration;
-          display: table;
-          border-radius: 10px;
         }
       }
-
-      &:hover {
-        span {
-          &:nth-of-type(even) {
-            &:before {
-              transform: scaleX(1) translateZ(0);
-              transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
-            }
-
-            &:after {
-              transform: scaleX(0) translateZ(0);
-              transition: transform .6s cubic-bezier(.165, .84, .44, 1);
-            }
-          }
-
-          &:before {
-            transform: scaleX(0) translateZ(0);
-            transition: transform .6s cubic-bezier(.165, .84, .44, 1);
-          }
-
-          &:after {
-            transform: scaleX(1) translateZ(0);
-            transition: transform .6s cubic-bezier(.165, .84, .44, 1) .2s;
-          }
-
-        }
-      }
-
-    }
-
-    .menu-item {
-      color: $frosted-sky;
-      &:hover {
-        color: $sky-breeze;
-      }
-    }
-    .navbar-wrapper {
-      @include media-screen-max-1024 {
-        background-color: $midnight-depth;
-      }
-    }
-
   }
 
+  .header-link {
+    color: $twilight-steel;
+  }
 }
 
 

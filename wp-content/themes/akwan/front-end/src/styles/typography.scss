@@ -69,14 +69,14 @@
 h1, .akwan-h1, .akwan-h1 p {
   font-family:$Somar;
   color: white;
-  font-size: 40px;
+  font-size: 25px;
   font-weight: 700;
   line-height: 120%;
   @include media-screen-min-768 {
-    font-size: 50px;
+    font-size: 35px;
   }
   @include media-screen-min-1024 {
-    font-size: 78px;
+    font-size: 46px;
   }
 }
 
@@ -161,7 +161,7 @@ h6, .akwan-h6, .akwan-h6 p {
 .paragraph-16, .paragraph-16 p {
   font-family:$Somar;
   font-size: 16px;
-  font-weight: 50;
+  font-weight: 500;
   line-height: 120%;
 }
 
@@ -212,22 +212,17 @@ h6, .akwan-h6, .akwan-h6 p {
   @include theme-cta-button-style;
 }
 
-.italic {
-  font-style: italic;
-}
 
 .midnight-depth , .midnight-depth p {
   color: $midnight-depth;
 }
 
-.urbanist , .urbanist p {
+.somar , .somar p {
   font-family: $Somar;
 }
-
-.maxima , .maxima p {
-  font-family: $Somar;
+.skybolt-blue , .skybolt-blue p {
+  color: $skybolt-blue;
 }
-
 .fw-300, .fw-300 p {
   font-weight: 300;
 }
@@ -250,10 +245,6 @@ h6, .akwan-h6, .akwan-h6 p {
 
 .fw-800, .fw-800 p {
   font-weight: 800;
-}
-
-.twilight-steel , .twilight-steel p {
-  color: $twilight-steel;
 }
 
 .capitalize-text {
@@ -280,12 +271,5 @@ h6, .akwan-h6, .akwan-h6 p {
   display: flex;
   flex-direction: column;
   gap: 16px;
-}
-
-.line {
-  width: 92px;
-  height: 3px;
-  background-color: $midnight-depth;
-  margin: 0 auto;
 }
 

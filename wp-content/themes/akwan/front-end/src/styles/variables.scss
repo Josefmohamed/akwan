@@ -189,16 +189,15 @@ $xxx-large-screen-min-width: 2500px;
   font-style: normal;
   transition: background-color $duration, color $duration;
   font-family: $Somar;
-  color: $sky-breeze;
-  font-weight: 700;
-  font-size: 24px;
+  color: $white;
+  border: 3px solid $skybolt-blue;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 100%;
-  background-color: $twilight-steel;
-  padding: 19px 30px;
-  border-radius: 20px;
+  padding: 15px 23px;
   &:hover{
-    background-color: $co378_blue;
-    color: $white;
+    background-color: $skybolt-blue;
+    color: $sky-breeze;
   }
   &.light {
     color: $midnight-depth;

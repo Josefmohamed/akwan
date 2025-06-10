@@ -2,33 +2,75 @@
 <?php
 $code_before_end_of_body_tag = get_field('code_before_end_of_body_tag', 'options');
 $footer_logo = get_field('footer_logo', 'options');
-$footer_text = get_field('footer_text', 'options');
 $privacy_policy = get_field('privacy_policy', 'options');
-
+$footer_info = get_field('footer_info', 'options');
+$copy_right_text = get_field('copy_right_text', 'options');
 ?>
 <footer>
   <div class="container">
-      <div class="footer-cards">
-          <div class="top-content">
+      <div class="horizontal-card column">
+          <div class="footer-wrapper">
+              <div class="footer-logo-info column">
                   <?php if ($footer_logo) { ?>
-                      <a href="<?= site_url() ?>" target="_self" role="img" class="footer-logo" aria-labelledby=" header_logo">
-                          <?= \Theme\Helpers::display_attachment($footer_logo, array("width" => 278, "height" => 69)) ?>
+                      <a href="<?= site_url() ?>" target="_self" role="img" class="header-logo" aria-labelledby=" header_logo">
+                          <?= \Theme\Helpers::display_attachment($footer_logo, array("width" => 115, "height" => 60)) ?>
                       </a>
                   <?php } ?>
-                  <?php if (have_rows('footer_links', 'options')) { ?>
-                      <ul class="footer-links">
-                          <?php while (have_rows('footer_links', 'options')) {
-                              the_row();
-                              $link = get_sub_field('link');
-                              ?>
-                              <?php if (!empty($link) && is_array($link)) { ?>
-                                  <li class="link-item">
-                                      <a class="footer-link maxima uppercase-text white-color" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>"><?= $link['title'] ?></a>
-                                  </li>
-                              <?php } ?>
-                          <?php } ?>
-                      </ul>
+                  <?php if ($footer_info) { ?>
+                      <h4 class="footer-info paragraph-12 skybolt-blue"><?= $footer_info ?></h4>
                   <?php } ?>
+              </div>
+              <div class="right-content">
+                  <?php
+                  if (have_rows('first_column', 'options')) :
+                      while (have_rows('first_column', 'options')) :
+                          the_row();
+                          ?>
+                          <?php if (have_rows('footer_link')) : ?>
+                          <div class="links-wrapper column">
+                              <?php while (have_rows('footer_link')) : the_row();
+                                  $link = get_sub_field('link');
+                                  ?>
+                                  <?php if ($link) { ?>
+                                      <div class="link-wrapper">
+                                          <a class="paragraph-14 fw-600 link skybolt-blue color-transition somar"  href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                                              <?= $link['title'] ?>
+                                          </a>
+                                      </div>
+                                  <?php } ?>
+                              <?php endwhile; ?>
+                          </div>
+                      <?php endif; ?>
+                      <?php endwhile;
+                  endif; ?>
+                  <?php
+                  if (have_rows('second_column', 'options')) :
+                      while (have_rows('second_column', 'options')) :
+                          the_row();
+                          ?>
+                          <?php if (have_rows('footer_link')) : ?>
+                          <div class="links-wrapper column">
+                              <?php while (have_rows('footer_link')) : the_row();
+                                  $link = get_sub_field('link');
+                                  ?>
+                                  <?php if ($link) { ?>
+                                      <div class="link-wrapper">
+                                          <a class="paragraph-14 fw-600 link skybolt-blue color-transition somar" href="<?= $link['url'] ?>" target="<?= $link['target'] ?>">
+                                              <?= $link['title'] ?></a>
+                                      </div>
+                                  <?php } ?>
+                              <?php endwhile; ?>
+                          </div>
+                      <?php endif; ?>
+                      <?php endwhile;
+                  endif; ?>
+
+              </div>
+          </div>
+          <div class="copy-right-social-links">
+              <?php if ($privacy_policy) { ?>
+                  <div class="paragraph-12 privacy-policy skybolt-blue"><?= $privacy_policy ?></div>
+              <?php } ?>
               <?php if (have_rows('social_links', 'options')) { ?>
                   <div class="social-links-wrapper">
                       <?php while (have_rows('social_links', 'options')) {
@@ -46,15 +88,6 @@ $privacy_policy = get_field('privacy_policy', 'options');
                       <?php } ?>
                   </div>
               <?php } ?>
-          </div>
-          <div class="center-line"></div>
-          <div class="bottom-content">
-              <?php if ($footer_text): ?>
-                  <h5 class="captions paragraph-18  white-color"><?= $footer_text ?></h5>
-              <?php endif; ?>
-              <?php if ($privacy_policy): ?>
-                  <div class="privacy-policy paragraph-18"><?= $privacy_policy ?></div>
-              <?php endif; ?>
           </div>
       </div>
   </div>
