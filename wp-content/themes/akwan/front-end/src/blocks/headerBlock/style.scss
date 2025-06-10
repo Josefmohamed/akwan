@@ -7,8 +7,10 @@ header {
   transition: background-color $duration;
   transform: translateX(0);
   background-color: $frosted-sky;
-  padding-block: 51px;
-
+  padding-block: 30px;
+  @include media-screen-min-1024 {
+    padding-block: 51px;
+  }
   .cards-wrapper {
     display: flex;
     align-items: center;
@@ -229,6 +231,9 @@ header {
         &:after {
           width: 100%;
         }
+      .header-link {
+        color: $graphite-gray;
+      }
       }
   }
 

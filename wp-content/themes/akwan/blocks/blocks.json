@@ -10,5 +10,10 @@
   "about_us_block": {
     "title": "About Us Block",
     "status": true
+  },
+  "our_mission_block": {
+    "title": "Our Mission Block",
+    "status": true
   }
+
 }
