@@ -6,5 +6,9 @@
   "get_in_touch_block": {
     "title": "Get In Touch Block",
     "status": true
+  },
+  "about_us_block": {
+    "title": "About Us Block",
+    "status": true
   }
 }
