@@ -200,14 +200,15 @@ $xxx-large-screen-min-width: 2500px;
     color: $sky-breeze;
   }
   &.light {
-    color: $midnight-depth;
+    padding: 9px 20px;
+    color: $skybolt-blue;
     background-color: $sky-breeze;
     svg {
       margin-left: 15px;
       transition: fill $duration;
     }
     &:hover{
-      background-color: $co378_blue;
+      background-color: $frosted-sky;
       color: $white;
       svg {
         path {

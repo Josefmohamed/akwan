@@ -104,11 +104,8 @@ add_filter('wp_handle_upload_prefilter', 'sanitize_svg');
 add_filter('gform_submit_button', 'form_submit_button', 10, 2);
 function form_submit_button($button, $form)
 {
-  return '<button class="cta-button large bg-orange cta-form" id="gform_submit_button_' . $form['id'] . '" aria-label="Submit">
-        Send message
-        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <path d="M12.2955 7.63456H0V6.61662H12.2955L6.39929 0.720448L7.12559 0L14.2512 7.12559L7.12559 14.2512L6.39929 13.5307L12.2955 7.63456Z" fill="#FBFAF6"></path>
-        </svg>
+  return '<button class="cta-button light cta-form" id="gform_submit_button_' . $form['id'] . '" aria-label="Submit">
+        Send
     </button>';
 }
 

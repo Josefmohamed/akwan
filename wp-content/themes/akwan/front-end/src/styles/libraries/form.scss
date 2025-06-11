@@ -14,13 +14,13 @@ body {
     border: none;
     outline: none;
     padding-bottom: 20px;
-    padding-left: 0;
     height: 58px;
-    border-bottom: 1px solid $midnight-overlay;
+    border-bottom: 1px solid $black;
     background: transparent !important;
     transition: border-color $duration, color $duration;
-    font-size: 22px !important;
-    line-height: 30px;
+    font-size: 18px !important;
+    line-height: 120%;
+    padding-left: 10px;
     &::placeholder {
       color: $midnight-overlay;
       font-family: $Somar;
@@ -32,10 +32,10 @@ body {
     }
     
     &:hover, &:focus {
-      border-color: $skybolt-blue !important;
-      color: $skybolt-blue;
+      border-color: $sky-breeze !important;
+      color: $sky-breeze;
       &::placeholder {
-        color: $skybolt-blue;
+        color: $sky-breeze;
       }
     }
   }
@@ -46,7 +46,7 @@ body {
     height: 50px !important;
     position: relative;
     border: none !important;
-    border-bottom: 1px solid $midnight-overlay !important;
+    border-bottom: 1px solid $black !important;
     margin-top: 65px !important;
   }
   
@@ -111,7 +111,7 @@ body {
   .gform_wrapper.gravity-theme .gsection_description,
   .gform_wrapper.gravity-theme .instruction {
     text-align: left;
-    color: $skybolt-blue;
+    color: $sky-breeze;
     @include input-style;
     font-size: 17px;
     text-transform: lowercase;
@@ -163,30 +163,22 @@ body {
   button.cta-button {
     outline: none;
     border: none;
-    min-width: 246px !important;
+    //min-width: 246px !important;
     margin-bottom: 0 !important;
-    margin-top: 32px !important;
-    min-height: 70px;
+    margin-top: 30px !important;
     margin-left: auto;
+    font-size: 18px;
+    min-height: 53px;
+    min-width: 118px;
+    @include media-screen-min-1024 {
+      margin-top: 62px !important;
+    }
     svg{
       display: none;
     }
-    @include media-screen-max-768{
-     padding-block: 0 !important;
-     font-size: 16px !important;
-     font-style: normal;
-   }
-    @include media-screen-min-768 {
-      min-width: 246px;
-      margin-top: 70px !important;
-    }
-    @include media-screen-max-600 {
-      margin-inline: auto ;
-    }
-    
-    &:hover {
-      background-color: $skybolt-blue;
-    }
+    //&:hover {
+    //  background-color: $skybolt-blue;
+    //}
     
   }
   
