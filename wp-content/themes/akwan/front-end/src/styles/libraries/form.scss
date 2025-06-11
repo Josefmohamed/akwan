@@ -388,9 +388,8 @@ body {
   select:-webkit-autofill:focus {
    @include input-style;
     outline: none;
-    color: $co555_gray !important;
-    caret-color: $co555_gray;
-    -webkit-text-fill-color: $co555_gray;
-    -webkit-box-shadow: 0 0 0 1000px $co555_gray inset;
+    color: $sky-breeze !important;
+    caret-color: $sky-breeze;
+    -webkit-text-fill-color: $sky-breeze;
   }
 }
