@@ -18,6 +18,9 @@
   "our_vision_block": {
     "title": "Our Vision Block",
     "status": true
+  },
+  "our_values_block": {
+    "title": "Our Values Block",
+    "status": true
   }
-
 }

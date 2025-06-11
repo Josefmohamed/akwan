@@ -7,6 +7,7 @@ import {page_not_found} from './page_not_found';
 import {about_us_block} from './about_us_block';
 import {our_mission_block} from './our_mission_block'
 import {our_vision_block} from './our_vision_block';
+import {our_values_block} from './our_values_block';
 
 export function indexBlocks() {
   headerBlock()
@@ -17,5 +18,6 @@ export function indexBlocks() {
   about_us_block()
   our_mission_block()
   our_vision_block()
+  our_values_block()
 }
 

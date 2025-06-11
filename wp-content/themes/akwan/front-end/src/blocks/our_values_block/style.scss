@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+.our_values_block {
+  padding-block: 90px;
+  @include media-screen-min-1024 {
+    padding-block: 135px 224px;
+  }
+  .values-description {
+    gap: 80px;
+    margin-top: 80px;
+    @include media-screen-min-1280 {
+      padding-left: 98px;
+    }
+  }
+  .values-wrapper {
+    display: grid;
+    row-gap: 70px;
+    column-gap: 70px;
+    grid-template-columns: repeat(1,1fr);
+    @include media-screen-min-992 {
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include media-screen-min-1280 {
+      column-gap: 217px;
+    }
+    .values-card {
+      display: flex;
+      gap: 22px;
+      .index-card {
+        position: relative;
+        .index {
+          position: absolute;
+        }
+        .svg-card {
+          @include media-screen-max-600 {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

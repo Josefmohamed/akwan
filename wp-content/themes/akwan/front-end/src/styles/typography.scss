@@ -142,11 +142,11 @@ h6, .akwan-h6, .akwan-h6 p {
 
 .paragraph-20, .paragraph-20 p {
   font-family:$Somar;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 120%;
   @include media-screen-min-768 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
