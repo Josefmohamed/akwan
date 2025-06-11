@@ -3,6 +3,7 @@
 .hero_block {
   background-color: $sky-breeze;
   padding-block: 80px;
+  z-index: 99;
   @include media-screen-min-1024 {
     padding-block: 132px 144px;
   }

@@ -34,12 +34,7 @@ $header_logo = get_field('header_logo', 'options');
                   <?= \Theme\Helpers::display_attachment($header_logo, array("width" => 103, "height" => 54)) ?>
               </a>
           <?php } ?>
-          <!-- burger menu and cross-->
-          <button aria-label="Open Menu Links" class="burger-menu">
-              <span></span>
-              <span></span>
-              <span></span>
-          </button>
+
           <!--     links  -->
           <nav class="navbar">
               <div class="navbar-wrapper">
@@ -60,7 +55,12 @@ $header_logo = get_field('header_logo', 'options');
                   <?php } ?>
               </div>
           </nav>
+          <!-- burger menu and cross-->
+          <button aria-label="Open Menu Links" class="burger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
       </div>
-
   </div>
 </header>
