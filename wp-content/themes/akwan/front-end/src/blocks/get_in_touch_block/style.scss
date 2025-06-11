@@ -17,10 +17,10 @@
       align-items: center;
     }
     @include media-screen-min-992 {
-      padding-left: 32px;
+      padding-inline-start: 32px;
     }
     @include media-screen-min-1024 {
-      padding-left: 120px;
+      padding-inline-start: 120px;
     }
     .left-content {
       position: relative;

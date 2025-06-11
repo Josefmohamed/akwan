@@ -27,14 +27,14 @@ if (isset($block)) {
 <div class="page-not-found">
   <div class="container">
     <div class="content-wrapper column">
-          <h1  class="main-title salute-h1 text-center midnight-depth fw-600">
+          <h1  class="main-title text-center sky-breeze fw-600">
             404
           </h1>
-          <div class="description paragraph-24 text-center midnight-depth">
+          <div class="description paragraph-18 text-center sky-breeze">
             Sorry, the page you are looking for could not be found. It might have been removed, renamed, or did not exist in the first place.
           </div>
         <a href="<?php site_url(); ?>"
-           class="cta-button main-cta-button has-icon" >
+           class="cta-button main-cta-button light" >
           Back to Home
         </a>
     </div>

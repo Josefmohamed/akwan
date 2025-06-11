@@ -61,6 +61,22 @@ $header_logo = get_field('header_logo', 'options');
               <span></span>
               <span></span>
           </button>
+
+          <div class="site-lang-switcher menu-item">
+              <?php
+              if (function_exists('pll_the_languages')) {
+                  $languages = pll_the_languages(array('raw' => 1, 'hide_current' => 1));
+                  foreach ($languages as $lang) {
+                      if ($lang['slug'] == 'ar') {
+                          echo '<a href="' . esc_url($lang['url']) . '" class="wpml-ls-item  nav-item capital-text body-2 " aria-label="تغيير اللغة إلى العربية">Change Languag to: AR</a>';
+                      } elseif ($lang['slug'] == 'en') {
+                          echo '<a href="' . esc_url($lang['url']) . '" class="wpml-ls-item  nav-item capital-text body-2" aria-label="Switch language to English">تغير اللغة  : EN</a>';
+                      }
+                  }
+              }
+              ?>
+          </div>
+
       </div>
   </div>
 </header>

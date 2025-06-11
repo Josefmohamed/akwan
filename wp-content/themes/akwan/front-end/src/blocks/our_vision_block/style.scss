@@ -18,10 +18,10 @@
       gap: 50px;
     }
     @include media-screen-min-768 {
-      padding-right: 32px;
+      padding-inline-end: 32px;
     }
     @include media-screen-min-1024 {
-      padding-right: 169px;
+      padding-inline-end: 169px;
     }
     .left-image-card {
       width: 100%;
