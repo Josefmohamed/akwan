@@ -1,7 +1,7 @@
 {
     "key": "ui_options_page_6820ec7e63b28",
     "title": "Site Settings",
-    "active": true,
+    "active": false,
     "menu_order": 0,
     "page_title": "Site Settings",
     "menu_slug": "site-settings",
@@ -22,5 +22,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1746988168
+    "modified": 1749715446
 }

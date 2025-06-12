@@ -36,7 +36,14 @@
             height: 50px;
           }
         }
+        body.rtl & {
+          transform: scaleX(-1);
+          .index , .svg-card {
+            transform: scaleX(-1);
+          }
+        }
       }
+
     }
   }
 }

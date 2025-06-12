@@ -14,13 +14,7 @@ header {
   .cards-wrapper {
     display: flex;
     align-items: center;
-    gap: 50px;
-    @include media-screen-max-1024 {
-      justify-content: space-between;
-    }
-    @include media-screen-min-1024 {
-      gap: 95px;
-    }
+    justify-content: space-between;
   }
   // logo
   .header-logo {
@@ -221,6 +215,9 @@ header {
     width: fit-content;
     transition: color $duration;
     list-style: none;
+    .header-link {
+      color: $twilight-steel;
+    }
     &:after {
       position: absolute;
       content: "";
@@ -241,9 +238,6 @@ header {
       }
   }
 
-  .header-link {
-    color: $twilight-steel;
-  }
 }
 
 
