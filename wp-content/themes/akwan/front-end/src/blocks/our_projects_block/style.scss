@@ -1,7 +1,22 @@
 @import '../../styles/variables.scss';
 
 .our_projects_block {
-  background-color: gold;
+
   padding-block: 80px;
 
+
+  .main-title {
+    font-weight: 700;
+    color: $sky-breeze;
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+
+  .projects-title {
+    font-weight: 700;
+    color: $sky-breeze;
+    width: fit-content;
+    margin-inline: auto;
+  }
 }
