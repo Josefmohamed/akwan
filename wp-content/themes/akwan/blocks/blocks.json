@@ -22,5 +22,13 @@
   "our_values_block": {
     "title": "Our Values Block",
     "status": true
+  },
+  "map_block": {
+    "title": "Map Block",
+    "status": true
+  },
+  "our_projects_block": {
+    "title": "Our Projects Block",
+    "status": true
   }
 }
