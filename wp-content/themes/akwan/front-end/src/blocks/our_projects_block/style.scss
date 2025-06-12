@@ -4,7 +4,9 @@
 
   padding-block: 80px;
 
-
+.container{
+  padding: 0;
+}
   .main-title {
     font-weight: 700;
     color: $sky-breeze;
@@ -19,4 +21,11 @@
     width: fit-content;
     margin-inline: auto;
   }
+
+.project-card{
+
+  .project-image{
+    padding-top: 100.6%;
+  }
+}
 }

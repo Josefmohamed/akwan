@@ -7,7 +7,7 @@ $image_id = get_field('project_image', $post_id);
 
 
 
-<div class="swiper-slide blog-card" id="post-id-<?= $post_id ?>">
+<div class="swiper-slide project-card" id="post-id-<?= $post_id ?>">
 
     <?php if ($post_title) { ?>
         <a class="salute-h3 fw-800 card-title" href="<?= get_permalink($post_id); ?>">
@@ -16,7 +16,7 @@ $image_id = get_field('project_image', $post_id);
     <?php } ?>
     <?php if ($image_id) { ?>
             <?php
-            $picture_class = 'cover-image';
+            $picture_class = 'project-image aspect-ratio';
             echo bis_get_attachment_picture(
                 $image_id,
                 [

@@ -20,13 +20,15 @@ export function our_projects_block() {
     new Swiper(wrapper, {
       slidesPerView: 1.4,
       spaceBetween: 25,
+      centeredSlides: true,
       loop: true,
       breakpoints: {
         768: {
           spaceBetween: 35
         },
         1280: {
-          spaceBetween: 5
+          slidesPerView: 3.73,
+          spaceBetween: 43
         },
       },
       modules: [Navigation],
