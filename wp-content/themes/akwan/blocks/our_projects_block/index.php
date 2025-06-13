@@ -58,44 +58,102 @@ $main_title = get_field('main_title');
                     }
 
                     ?>
+                    <div class="projects-wrapper">
+                        <h5 class="projects-title">
+                            <span><?= $index ?></span>)
+                            <?= $title ?>
+                        </h5>
 
-                    <h5 class="projects-title">
-                        <span><?= $index ?></span>)
-                        <?= $title ?>
-                    </h5>
-
-                    <?php if ($programmatic_or_manual === 'manual') {
-                        ?>
-                        <div class="swiper projects-wrapper">
-                            <div class="swiper-wrapper cards-wrapper">
-                                <?php
-                                $cards = get_sub_field("project_card");
-                                if (is_array($cards)) {
-                                    foreach ($cards as $card) {
-                                        get_template_part("partials/project-card", "", ["post_id" => $card->ID]);
+                        <?php if ($programmatic_or_manual === 'manual') {
+                            ?>
+                            <div class="swiper projects-swiper">
+                                <div class="swiper-wrapper cards-wrapper">
+                                    <?php
+                                    $cards = get_sub_field("project_card");
+                                    if (is_array($cards)) {
+                                        foreach ($cards as $card) {
+                                            get_template_part("partials/project-card", "", ["post_id" => $card->ID]);
+                                        }
                                     }
-                                }
-                                ?>
+                                    ?>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="19" height="52" viewBox="0 0 19 52" fill="none">
+                                        <g clip-path="url(#clip0_49_1405)">
+                                            <path d="M19 12.2285L19 0L-2.7182e-06 18.5501L-3.36949e-06 33.4499L19 52L19 39.7715L4.95506 26L19 12.2285Z"
+                                                  fill="#EFEBE2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_49_1405">
+                                                <rect width="52" height="19" fill="white"
+                                                      transform="translate(19) rotate(90)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="19" height="52" viewBox="0 0 19 52" fill="none">
+                                        <g clip-path="url(#clip0_49_1401)">
+                                            <path d="M-5.34523e-07 39.7715L0 52L19 33.4499L19 18.5501L-2.27299e-06 0L-1.73847e-06 12.2285L14.0449 26L-5.34523e-07 39.7715Z"
+                                                  fill="#EFEBE2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_49_1401">
+                                                <rect width="52" height="19" fill="white"
+                                                      transform="translate(0 52) rotate(-90)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
                             </div>
-                            <div class="swiper-button-prev">^^</div>
-                            <div class="swiper-button-next">^^</div>
-                        </div>
 
-                    <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
+                        <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
 
-                        <div class="swiper projects-wrapper">
-                            <div class="swiper-wrapper cards-wrapper">
-                                <?php while ($the_query->have_posts()) {
-                                    $the_query->the_post();
-                                    get_template_part("partials/project-card", "", ["post_id" => get_the_ID()]);
-                                } ?>
-                                <?php wp_reset_postdata(); ?>
+                            <div class="swiper projects-swiper">
+                                <div class="swiper-wrapper cards-wrapper">
+                                    <?php while ($the_query->have_posts()) {
+                                        $the_query->the_post();
+                                        get_template_part("partials/project-card", "", ["post_id" => get_the_ID()]);
+                                    } ?>
+                                    <?php wp_reset_postdata(); ?>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg width="19" height="52" viewBox="0 0 19 52" fill="none">
+                                        <g clip-path="url(#clip0_49_1405)">
+                                            <path d="M19 12.2285L19 0L-2.7182e-06 18.5501L-3.36949e-06 33.4499L19 52L19 39.7715L4.95506 26L19 12.2285Z"
+                                                  fill="#EFEBE2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_49_1405">
+                                                <rect width="52" height="19" fill="white"
+                                                      transform="translate(19) rotate(90)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
+                                <div class="swiper-button-next">
+                                    <svg width="19" height="52" viewBox="0 0 19 52" fill="none">
+                                        <g clip-path="url(#clip0_49_1401)">
+                                            <path d="M-5.34523e-07 39.7715L0 52L19 33.4499L19 18.5501L-2.27299e-06 0L-1.73847e-06 12.2285L14.0449 26L-5.34523e-07 39.7715Z"
+                                                  fill="#EFEBE2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_49_1401">
+                                                <rect width="52" height="19" fill="white"
+                                                      transform="translate(0 52) rotate(-90)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </div>
                             </div>
-                            <div class="swiper-button-prev">^^</div>
-                            <div class="swiper-button-next">^^</div>
-                        </div>
-                    <?php } ?>
+                        <?php } ?>
 
+
+                    </div>
                     <?php
                     $index++;
                 }
