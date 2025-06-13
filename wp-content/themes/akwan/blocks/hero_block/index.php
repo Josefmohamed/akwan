@@ -31,7 +31,7 @@ $image = get_field('image');
         <div class="cards-wrapper ">
             <div class="left-content column">
                 <?php if ($title) { ?>
-                    <h1 class="akwan-h1 title white-color"><?= $title ?></h1>
+                    <h1 class="akwan-h1 title white-color fw-700 capitalize-text"><?= $title ?></h1>
                 <?php } ?>
                 <?php if ($description) { ?>
                     <div class="description paragraph-14 white-color"><?= $description ?></div>
