@@ -10,6 +10,9 @@
     @include media-screen-min-1280 {
       padding-left: 98px;
     }
+    body.rtl & {
+      padding-left: 0;
+    }
   }
   .values-wrapper {
     display: grid;
@@ -43,7 +46,6 @@
           }
         }
       }
-
     }
   }
 }
