@@ -58,6 +58,13 @@ footer {
       align-items: center;
       flex-direction: row;
     }
+    body.rtl & {
+      flex-direction: row-reverse;
+    }
+    .privacy-policy {
+      body.rtl & {
+        direction: ltr;      }
+    }
     .social-links-wrapper {
       display: flex;
       align-items: center;
