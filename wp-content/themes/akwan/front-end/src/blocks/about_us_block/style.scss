@@ -16,12 +16,6 @@
     @include media-screen-min-768 {
       width: 48.47%;
     }
-    .description {
-      @include media-screen-min-1280 {
-        overflow-y: auto;
-        max-height: 300px;
-      }
-    }
     @include media-screen-min-1024 {
       padding: 78px 71px 69px 121px;
     }

@@ -1,7 +1,22 @@
 @import '../../styles/variables.scss';
 
 .map_block {
-  background-color: rebeccapurple;
-  padding-block: 80px;
-
+  padding-block: 139px 148px;
+  .content {
+    margin-bottom: 70px;
+    gap: 5px;
+    .sub-title {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 62px;
+        height: 3px;
+        background-color: #1C3766;
+        top: 50%;
+        transform: translate(-200%,-50%);
+      }
+    }
+  }
 }
