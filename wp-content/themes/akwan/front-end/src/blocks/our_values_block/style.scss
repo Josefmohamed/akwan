@@ -32,6 +32,9 @@
         position: relative;
         .index {
           position: absolute;
+          @include media-screen-max-768 {
+            font-size: 25px;
+          }
         }
         .svg-card {
           @include media-screen-max-600 {
