@@ -56,11 +56,14 @@
 
   .projects-wrapper {
     margin-top: 100px;
-    margin-bottom: 10px;
     @include media-screen-min-768 {
       margin-top: 150px;
-      margin-bottom: 10px;
     }
+
+  }
+
+  .projects-swiper {
+
   }
 
   .cards-wrapper {
