@@ -4,6 +4,16 @@
   @include media-screen-min-1024 {
     padding-block: 135px 224px;
   }
+  .site-shape {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 35.37%;
+    @include media-screen-max-768 {
+      display: none;
+    }
+  }
   .values-description {
     gap: 80px;
     margin-top: 80px;
@@ -24,6 +34,9 @@
     }
     @include media-screen-min-1280 {
       column-gap: 217px;
+    }
+    @include media-screen-max-992 {
+      max-width: 430px;
     }
     .values-card {
       display: flex;
