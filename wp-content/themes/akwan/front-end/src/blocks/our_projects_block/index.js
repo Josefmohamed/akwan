@@ -17,7 +17,7 @@ export function our_projects_block() {
     const nextEl = wrapper?.querySelector('.swiper-button-next');
     const prevEl = wrapper?.querySelector('.swiper-button-prev');
 
-    new Swiper(wrapper, {
+    const swiper = new Swiper(wrapper, {
       slidesPerView: 1.4,
       spaceBetween: 25,
       centeredSlides: true,
@@ -34,6 +34,7 @@ export function our_projects_block() {
         },
         1280: {
           slidesPerView: 3.73,
+          // slidesPerView: 'auto',
           spaceBetween: 43
         },
       },
