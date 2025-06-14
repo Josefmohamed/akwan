@@ -8,19 +8,8 @@ export function headerBlock() {
     const burgerMenu = header.querySelector('.burger-menu');
     const menuLinks = header.querySelector('.navbar');
 
-
     if (!burgerMenu) return;
-    const burgerTl = gsap.timeline({paused: true});
-    const burgerSpans = burgerMenu.querySelectorAll('span');
-    gsap.set(burgerSpans, {transformOrigin: 'center'});
-    burgerTl
-        .to(burgerSpans, {
-            y: gsap.utils.wrap([`0.5rem`, 0, `-0.5rem`]),
-            duration: 0.25,
-        })
-        .set(burgerSpans, {autoAlpha: gsap.utils.wrap([1, 0, 1])})
-        .to(burgerSpans, {rotation: gsap.utils.wrap([45, 0, -45])})
-        .set(burgerSpans, {rotation: gsap.utils.wrap([45, 0, 135])});
+
     burgerMenu.addEventListener('click', function () {
         if (burgerMenu.classList.contains('burger-menu-active')) {
             // region allow page scroll
@@ -29,12 +18,10 @@ export function headerBlock() {
             burgerMenu.classList.remove('burger-menu-active');
             menuLinks.classList.remove('header-links-active');
             header.classList.remove('header-active');
-            burgerTl.reverse();
         } else {
             burgerMenu.classList.add('burger-menu-active');
             menuLinks.classList.add('header-links-active');
             header.classList.add('header-active');
-            burgerTl.play();
             // region prevent page scroll
             document.documentElement.classList.add('modal-opened');
             // endregion prevent page scroll
@@ -79,6 +66,14 @@ export function headerBlock() {
 
 
     // endregion open sub menu in responsive
+
+    header.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
+                event.stopPropagation();
+            }
+        });
+    });
 
 }
 

@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 .our_mission_block {
   background-color: $sky-breeze;
-  padding-block: 80px;
+  padding-block: 50px;
   @include media-screen-min-1024 {
     padding-block: 147px 167px;
   }

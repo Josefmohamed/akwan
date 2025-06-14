@@ -7,6 +7,18 @@
   @include media-screen-min-1024 {
     padding-block: 132px 144px;
   }
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  .v-shape {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: 22%;
+    min-width: 200px;
+  }
   .cards-wrapper {
     display: flex;
     align-items: center;
