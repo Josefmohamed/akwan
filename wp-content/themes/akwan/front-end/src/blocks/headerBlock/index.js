@@ -80,5 +80,13 @@ export function headerBlock() {
 
     // endregion open sub menu in responsive
 
+    header.querySelectorAll('a').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            if ((anchor.href === window.location.href || anchor.href === window.location.href + '#' || anchor.href === window.location.href.slice(0, -1))) {
+                event.stopPropagation();
+            }
+        });
+    });
+
 }
 
