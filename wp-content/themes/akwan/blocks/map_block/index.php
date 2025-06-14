@@ -22,13 +22,15 @@ if (isset($block)) {
 ?>
 <?php
 $title = get_field('title');
-$description = get_field('description');
-$cta_button = get_field('cta_button');
-$image = get_field('image');
+$mab = get_field('mab');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
-
+        <?php if ($mab) { ?>
+        <div class="mab">
+            <?= $mab ?>
+        </div>
+        <?php } ?>
     </div>
 </section>
 
