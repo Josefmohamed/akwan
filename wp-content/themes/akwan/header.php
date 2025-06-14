@@ -73,7 +73,6 @@ $header_logo = get_field('header_logo', 'options');
           <button aria-label="Open Menu Links" class="burger-menu">
               <span></span>
               <span></span>
-              <span></span>
           </button>
 
           <div class="site-lang-switcher menu-item desktop">
