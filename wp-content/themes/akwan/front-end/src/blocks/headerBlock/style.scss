@@ -212,27 +212,48 @@ header {
     list-style: none;
     .header-link {
       color: $twilight-steel;
-    }
-    &:after {
-      position: absolute;
-      content: "";
-      bottom: -10px;
-      inset-inline-start: 0;
-      width: 0;
-      height: 4px;
-      background-color: $graphite-gray;
-      transition: width $duration;
+      &:after {
+        position: absolute;
+        content: "";
+        bottom: -10px;
+        inset-inline-start: 0;
+        width: 0;
+        height: 4px;
+        background-color: $graphite-gray;
+        transition: width $duration;
+      }
+      &.header-link-active {
+        color: $graphite-gray;
+        &:after {
+            width: 100%;
+        }
+      }
     }
     &:hover {
+      .header-link {
+        color: $graphite-gray;
         &:after {
           width: 100%;
         }
-      .header-link {
-        color: $graphite-gray;
       }
       }
   }
 
+  .site-lang-switcher {
+    &.desktop {
+      display: none;
+      @include media-screen-min-1024 {
+        display: block;
+      }
+    }
+    &.mobile {
+      display: block;
+      padding-top: 45px;
+      @include media-screen-min-1024 {
+        display: none;
+      }
+    }
+  }
 }
 
 
