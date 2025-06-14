@@ -148,7 +148,9 @@ header {
       }
 
     }
-
+    @include media-screen-min-1024 {
+      display: none;
+    }
   }
 
   // links
