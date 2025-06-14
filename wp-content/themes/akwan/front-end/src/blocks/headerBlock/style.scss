@@ -167,19 +167,16 @@ header {
   }
 
   .navbar-wrapper {
-    padding-block: 150px 100px;
-    padding-inline: 25px;
+    padding-top: 150px;
+    padding-inline: 24px;
     background: $frosted-sky;
     width: 100%;
     height: 100vh;
-    //height: 100 dvh;
     transition: padding $duration;
-    overflow: scroll;
+    overflow: auto;
     display: flex;
     flex-direction: column;
-    gap: 32px;
     @include media-screen-min-1024 {
-      gap: 12px;
       background-color: transparent;
       padding: 0;
       width: auto;
@@ -188,9 +185,7 @@ header {
       flex-direction: row;
       align-items: center;
     }
-    @include media-screen-min-1024{
-      gap: 80px;
-    }
+
   }
 
   .primary-menu {
