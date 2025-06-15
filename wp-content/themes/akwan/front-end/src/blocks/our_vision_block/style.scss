@@ -9,7 +9,7 @@
     height: 24.4%;
     background: $midnight-depth;
     bottom: -11%;
-    left: 18%;
+    inset-inline-start: 18%;
     z-index: 1;
     @include media-screen-max-768 {
       display: none;
