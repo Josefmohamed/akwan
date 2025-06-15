@@ -59,11 +59,14 @@ footer {
       flex-direction: row;
     }
     body.rtl & {
-      flex-direction: row-reverse;
+      @include media-screen-min-1024 {
+        flex-direction: row-reverse;
+      }
     }
     .privacy-policy {
       body.rtl & {
-        direction: ltr;      }
+        direction: ltr;
+      }
     }
     .social-links-wrapper {
       display: flex;

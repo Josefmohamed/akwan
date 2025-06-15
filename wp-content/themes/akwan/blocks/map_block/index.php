@@ -27,7 +27,7 @@ $mab = get_field('mab');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
-        <div class="content column">
+        <div class="content column animation-fade-me-up">
             <?php if ($title) { ?>
             <div class="akwan-h6 title fw-400 sky-breeze"><?= $title ?></div>
             <?php } ?>

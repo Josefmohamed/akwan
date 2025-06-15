@@ -24,7 +24,7 @@ if (isset($block)) {
     }
 }
 ?>
-<div class="page-not-found">
+<div class="page-not-found animation-fade-me-up">
   <div class="container">
     <div class="content-wrapper column">
           <h1  class="main-title text-center sky-breeze fw-600">

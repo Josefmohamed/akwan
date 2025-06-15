@@ -54,7 +54,7 @@
             "label": "Project Type",
             "name": "project_type",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -64,18 +64,19 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "translations": "copy_once",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
         },
         {
             "key": "field_684de5a36b1df",
             "label": "Style",
             "name": "style",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -85,18 +86,19 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "translations": "copy_once",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
         },
         {
             "key": "field_684de5aa6b1e0",
             "label": "Value",
             "name": "value",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -106,11 +108,12 @@
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
+            "translations": "copy_once",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
         },
         {
             "key": "field_684b10c5dd5dc",
@@ -127,11 +130,12 @@
                 "id": ""
             },
             "default_value": "",
+            "translations": "copy_once",
             "allow_in_bindings": 1,
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         }
     ],
     "location": [
@@ -152,5 +156,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1749935551
+    "modified": 1749955500
 }

@@ -66,13 +66,13 @@ $next_post = get_next_post();
                         <div class=" paragraph-14 project-years"><?= $project_years ?></div>
                     <?php } ?>
                     <?php if ($project_type) { ?>
-                        <div class="paragraph-14 project-type project-list"><span>Projcet |</span><?= $project_type ?></div>
+                        <div class="paragraph-14 project-type project-list"><?= $project_type ?></div>
                     <?php } ?>
                     <?php if ($style) { ?>
-                        <div class="paragraph-14 project-style project-list"><span>Style |</span><?= $style ?></div>
+                        <div class="paragraph-14 project-style project-list"><?= $style ?></div>
                     <?php } ?>
                     <?php if ($value) { ?>
-                        <div class="paragraph-14 project-value project-list"><span>Value |</span><?= $value ?></div>
+                        <div class="paragraph-14 project-value project-list"><?= $value ?></div>
                     <?php } ?>
 
                 </div>

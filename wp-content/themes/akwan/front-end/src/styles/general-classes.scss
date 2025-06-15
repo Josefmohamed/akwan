@@ -249,6 +249,12 @@ section {
       width: 100%;
       padding-top: 129.78%;
     }
+    .prev , .next {
+      body.rtl & {
+        transform: scaleX(-1);
+      }
+
+    }
   }
 
   .bottom-wrapper {
@@ -280,7 +286,7 @@ section {
         &:after {
           content: "";
           position: absolute;
-          left: 0;
+          inset-inline-start: 0;
           bottom: 0;
           height: 2px;
           width: 33px;
@@ -324,7 +330,7 @@ section {
         &:after {
           content: "";
           position: absolute;
-          left: 0;
+          inset-inline-start: 0;
           bottom: 0;
           height: 2px;
           width: 33px;

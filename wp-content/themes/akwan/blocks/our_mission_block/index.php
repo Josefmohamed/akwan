@@ -28,7 +28,7 @@ $image = get_field('image');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
-        <div class="content column">
+        <div class="content column animation-fade-me-up">
             <?php if ($title) { ?>
                 <h2 class="akwan-h2 title fw-700 capitalize-text"><?= $title ?></h2>
             <?php } ?>

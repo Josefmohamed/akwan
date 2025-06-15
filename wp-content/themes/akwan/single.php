@@ -47,5 +47,4 @@ $hide_sidebar = get_field('hide_sidebar', $post_id);
             <?php the_content(); ?>
         </div>
     </section>
-
 <?php get_footer(); ?>

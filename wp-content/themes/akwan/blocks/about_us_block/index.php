@@ -27,7 +27,7 @@ $cta_button = get_field('cta_button');
 $image = get_field('image');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-    <div class="hero-image">
+    <div class="hero-image animation-fade-me-up">
         <?php
         $picture_class = 'cover-image aspect-ratio';
         echo bis_get_attachment_picture(
@@ -44,7 +44,7 @@ $image = get_field('image');
             ]
         );
         ?>
-        <div class="internal-content column large-media">
+        <div class="internal-content column large-media animation-fade-me-up">
             <?php if ($title) { ?>
                 <h2 class="akwan-h2 title sky-breeze fw-700 capitalize-text"><?= $title ?></h2>
             <?php } ?>
@@ -53,7 +53,7 @@ $image = get_field('image');
             <?php } ?>
         </div>
     </div>
-    <div class="internal-content column small-media">
+    <div class="internal-content column small-media animation-fade-me-up">
         <?php if ($title) { ?>
             <h2 class="akwan-h2 title sky-breeze fw-700 capitalize-text"><?= $title ?></h2>
         <?php } ?>

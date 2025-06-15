@@ -28,12 +28,11 @@ $main_title = get_field('main_title');
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
         <?php if ($main_title) { ?>
-            <h2 class="main-title">
+            <h2 class="main-title animation-fade-me-up">
                 <?= $main_title ?>
             </h2>
         <?php } ?>
         <div class="content-wrapper">
-
             <?php if (have_rows('projects')) {
                 $index = 1;
                 while (have_rows('projects')) {
@@ -59,14 +58,14 @@ $main_title = get_field('main_title');
 
                     ?>
                     <div class="projects-wrapper">
-                        <h5 class="projects-title">
+                        <h5 class="projects-title animation-fade-me-up">
                             <span><?= $index ?></span>)
                             <?= $title ?>
                         </h5>
 
                         <?php if ($programmatic_or_manual === 'manual') {
                             ?>
-                            <div class="swiper projects-swiper">
+                            <div class="swiper projects-swiper animation-fade-me-up">
                                 <div class="swiper-wrapper cards-wrapper">
                                     <?php
                                     $cards = get_sub_field("project_card");
@@ -111,7 +110,7 @@ $main_title = get_field('main_title');
 
                         <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
 
-                            <div class="swiper projects-swiper">
+                            <div class="swiper projects-swiper animation-fade-me-up">
                                 <div class="swiper-wrapper cards-wrapper">
                                     <?php while ($the_query->have_posts()) {
                                         $the_query->the_post();

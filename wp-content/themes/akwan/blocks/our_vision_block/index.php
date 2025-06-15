@@ -33,9 +33,8 @@ $image = get_field('image');
         <path d="M812.078 67.0889L850.872 28.2822L822.616 0H827.407L853.312 25.9326L879.236 0H884.067L857.386 26.6875H934.561L939.33 21.9121V26.7129L935.949 30.0986H853.854L812.056 71.9033L743.316 140.666L700 97.1973L729.358 67.7988H807.96L740.184 0H745.012L812.078 67.0889ZM704.812 97.1963L743.324 135.844L807.952 71.2012H730.777L704.812 97.1963Z" fill="#023568"/>
         <path d="M545.852 20.877L516 52.4092H432.525L390.024 97.248L320.131 171L276.086 124.377L305.938 92.8447H385.859L297.872 0H302.772L390.04 92.084L429.485 50.4609L381.693 0H386.574L431.975 47.9404L477.407 0H482.314L436.108 48.751H514.58L540.98 20.8691L540.988 20.877L521.266 0H526.129L545.852 20.877ZM307.373 96.4951L280.973 124.377L320.131 165.828L385.845 96.4951H307.373Z" fill="#023568"/>
     </svg>
-
     <div class="cards-wrapper">
-        <div class="left-image-card">
+        <div class="left-image-card animation-fade-me-up">
             <?php
             $picture_class = 'left-image aspect-ratio';
             echo bis_get_attachment_picture(
@@ -54,7 +53,7 @@ $image = get_field('image');
             );
             ?>
         </div>
-        <div class="right-content column">
+        <div class="right-content column animation-fade-me-up">
             <?php if ($title) { ?>
                 <h2 class="akwan-h2 title sky-breeze fw-700 capitalize-text"><?= $title ?></h2>
             <?php } ?>

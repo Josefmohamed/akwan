@@ -29,7 +29,7 @@ $image = get_field('image');
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
         <div class="cards-wrapper ">
-            <div class="left-content column">
+            <div class="left-content column animation-fade-me-up">
                 <?php if ($title) { ?>
                     <h1 class="akwan-h1 title white-color fw-700 capitalize-text"><?= $title ?></h1>
                 <?php } ?>
@@ -40,7 +40,7 @@ $image = get_field('image');
                     <a class="cta-button theme-cta-button cta-hero" href="<?= $cta_button['url'] ?>" target="<?= $cta_button['target'] ?>"><?= $cta_button['title'] ?></a>
                 <?php } ?>
             </div>
-            <div class="right-image">
+            <div class="right-image animation-fade-me-up">
                 <?php
                 $picture_class = 'image aspect-ratio';
                 echo bis_get_attachment_picture(
@@ -61,21 +61,10 @@ $image = get_field('image');
             </div>
         </div>
     </div>
-
-    <!-- if header is fixed use this -->
-
-<!--    <svg class="v-shape" width="314" height="861" viewBox="0 0 314 861" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--        <g style="mix-blend-mode:multiply" opacity="0.15">-->
-<!--            <path d="M311.708 202.166V0L110.675 202.166L0 313.411V553.122L22.6899 575.563L314 861V668.766L78.0477 433.142L199.144 313.411L311.708 202.166Z" fill="#003964"/>-->
-<!--        </g>-->
-<!--    </svg>-->
     <svg class="v-shape" width="314" height="706" viewBox="0 0 314 706" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g style="mix-blend-mode:multiply" opacity="0.15">
             <path d="M157 1H311.708V47.166L199.144 158.41L78.0479 278.142L314 513.766V706L22.6895 420.563L0 398.121V158.41L110.676 47.166L157 0.581055V1Z" fill="#003964"/>
         </g>
     </svg>
-
-
-
 </section>
 

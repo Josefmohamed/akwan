@@ -30,7 +30,7 @@ $email = get_field('email');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="content-wrapper">
-        <div class="left-content column">
+        <div class="left-content column animation-fade-me-up">
             <?php if ($title) { ?>
                     <h4 class="akwan-h5 fw-600 sky-breeze"><?= $title ?></h4>
                 <?php } ?>
@@ -54,7 +54,7 @@ $email = get_field('email');
             </div>
         </div>
         <?php if ($form) {?>
-            <div class="contact-us-form-wrapper column contact-details">
+            <div class="contact-us-form-wrapper column contact-details animation-fade-me-up">
                 <?php if ($form_title) { ?>
                 <div class="paragraph-18 sky-breeze text-center fw-500 form-title"><?= $form_title ?></div>
                 <?php } ?>

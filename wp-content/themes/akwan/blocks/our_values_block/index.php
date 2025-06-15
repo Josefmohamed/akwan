@@ -27,9 +27,9 @@ $description = get_field('description');
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
         <?php if ($title) { ?>
-        <h2 class="akwan-h2 title fw-700 sky-breeze capitalize-text"><?= $title ?></h2>
+        <h2 class="akwan-h2 title fw-700 sky-breeze capitalize-text animation-fade-me-up"><?= $title ?></h2>
         <?php } ?>
-        <div class="values-description column">
+        <div class="values-description column animation-fade-me-up">
             <?php if ($description) { ?>
             <div class="paragraph-20 fw-600 sky-breeze description"><?= $description ?></div>
             <?php } ?>
