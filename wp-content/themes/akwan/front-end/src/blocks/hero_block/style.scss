@@ -18,11 +18,14 @@
     height: auto;
     width: 22%;
     min-width: 200px;
-    body.rtl & {
-      transform: scaleX(-1);
+    g {
+      body.rtl & {
+        transform: scaleX(-1);
+        transform-origin: center;
+      }
     }
-
   }
+
   .cards-wrapper {
     display: flex;
     align-items: center;
