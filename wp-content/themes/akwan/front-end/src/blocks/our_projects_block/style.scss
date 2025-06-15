@@ -1,8 +1,10 @@
 @import '../../styles/variables.scss';
 
 .our_projects_block {
-
-  padding-block: 61px 211px;
+  padding-block: 100px;
+  @include media-screen-min-1024 {
+    padding-block: 124px 173px;
+  }
 
   .container {
     padding: 0;

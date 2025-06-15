@@ -5,11 +5,14 @@
   .site-shape {
     position: absolute;
     bottom: 0;
-    left: 0;
+    inset-inline-start: 0;
     z-index: -1;
     width: 40%;
     height: auto;
     max-width: 570px;
+    body.rtl & {
+      transform: scale(-1);
+    }
   }
 
   .content {
@@ -25,10 +28,10 @@
         top: 50%;
         width: 22px;
         transform: translateY(-50%);
-        right: calc(100% + 10px);
+        inset-inline-end: calc(100% + 10px);
         @include media-screen-min-1280 {
           width: 62px;
-          right: calc(100% + 58px);
+          inset-inline-end: calc(100% + 58px);
         }
       }
     }
