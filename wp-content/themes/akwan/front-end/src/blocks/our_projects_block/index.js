@@ -25,14 +25,17 @@ export function our_projects_block() {
       speed: 600,
       breakpoints: {
         768: {
+          centeredSlides: false,
           spaceBetween: 25,
           slidesPerView: 2.4,
         },
         992: {
+          centeredSlides: false,
           spaceBetween: 15,
           slidesPerView: 3.4,
         },
         1280: {
+          centeredSlides: false,
           slidesPerView: 3.73,
           // slidesPerView: 'auto',
           spaceBetween: 43
