@@ -20,7 +20,7 @@ body {
     transition: border-color $duration, color $duration;
     font-size: 18px !important;
     line-height: 120%;
-    padding-left: 10px;
+    padding-inline-start: 20px;
     &::placeholder {
       color: $midnight-overlay;
       font-family: $Somar;
