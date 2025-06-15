@@ -2,6 +2,19 @@
 
 .our_vision_block {
   background-color: $skybolt-blue;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 24.4%;
+    background: $midnight-depth;
+    bottom: -11%;
+    left: 18%;
+    z-index: 1;
+    @include media-screen-max-768 {
+      display: none;
+    }
+  }
   @include media-screen-max-768 {
     padding-block: 60px;
   }

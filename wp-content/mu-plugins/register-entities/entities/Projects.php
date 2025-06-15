@@ -28,7 +28,6 @@ class Projects extends Entity
         'supports' => array(
             'title',
             'custom-fields',
-            'thumbnail'
         ),
         'hierarchical' => false,
         'public' => true,
